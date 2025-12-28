@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Knowledge Base - Websavers Inc</title>
+
+  <!-- Vendor styles -->
+  <link href="/whmcs/assets/fonts/css/open-sans-family.css" rel="stylesheet" type="text/css" />
+  <link href="/whmcs/templates/twenty-one/css/all.min.css?v=bcdc23" rel="stylesheet" />
+  <link href="/whmcs/templates/twenty-one/css/theme.min.css?v=bcdc23" rel="stylesheet" />
+  <link href="/whmcs/assets/css/fontawesome-all.min.css" rel="stylesheet" />
+  <link href="/whmcs/templates/websavers21/css/custom.css" rel="stylesheet" />
+
+  <!-- Local styles -->
+  <link href="./css/site.css" rel="stylesheet" />
+
+  <script src="/whmcs/templates/twenty-one/js/scripts.min.js?v=bcdc23" defer></script>
+  <script src="/whmcs/templates/websavers21/js/custom.js?v=bcdc23" defer></script>
+  <script src="./js/site.js" defer></script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l !== "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-52VMD3G");
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="primary-bg-color knowledgebasecat index" data-phone-cc-input="1">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-52VMD3G"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+    ></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header id="header" class="header">
+    <div class="navbar navbar-light">
+      <div class="container">
+        <a class="navbar-brand mr-3" href="/whmcs/index.php">
+          <img src="/whmcs/assets/img/logo.png" alt="Websavers Inc" class="logo-img" />
+        </a>
+
+        <form method="post" action="/whmcs/knowledgebase/search" class="form-inline ml-auto">
+          <input type="hidden" name="token" value="d2a3e234184733503e2bf5fb0d65510ee08ef6af" />
+          <div class="input-group search d-none d-xl-flex">
+            <div class="input-group-prepend">
+              <button class="btn btn-default" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <input
+              class="form-control appended-form-control font-weight-light"
+              type="text"
+              name="search"
+              placeholder="Search our knowledgebase..."
+            />
+          </div>
+        </form>
+        <ul class="navbar-nav toolbar">
+          <li class="nav-item ml-3">
+            <a class="btn nav-link cart-btn" href="/whmcs/cart.php?a=view">
+              <i class="far fa-shopping-cart fa-fw"></i>
+              <span id="cartItemCount" class="badge badge-info">0</span>
+              <span class="sr-only">Order Progress</span>
+            </a>
+          </li>
+          <li class="nav-item ml-3 d-xl-none">
+            <button class="btn nav-link" type="button" data-toggle="collapse" data-target="#mainNavbar">
+              <span class="fas fa-bars fa-fw"></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar navbar-expand-xl main-navbar-wrapper">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <form method="post" action="/whmcs/knowledgebase/search" class="d-xl-none">
+            <input type="hidden" name="token" value="d2a3e234184733503e2bf5fb0d65510ee08ef6af" />
+            <div class="input-group search w-100 mb-2">
+              <div class="input-group-prepend">
+                <button class="btn btn-default" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+              <input
+                class="form-control prepended-form-control"
+                type="text"
+                name="search"
+                placeholder="Search our knowledgebase..."
+              />
+            </div>
+          </form>
+          <ul id="nav" class="navbar-nav mr-auto">
+            <li menuItemName="Home" class="d-block no-collapse" id="Primary_Navbar-Home">
+              <a class="pr-4" href="/whmcs/index.php">
+                <i class="fas fa-question-circle"></i>&nbsp; Get Help
+              </a>
+            </li>
+            <li menuItemName="Announcements" class="d-block no-collapse" id="Primary_Navbar-Announcements">
+              <a class="pr-4" href="/whmcs/announcements">
+                <i class="fas fa-newspaper"></i>&nbsp; Latest News
+              </a>
+            </li>
+            <li menuItemName="Knowledgebase" class="d-block no-collapse" id="Primary_Navbar-Knowledgebase">
+              <a class="pr-4" href="/whmcs/knowledgebase">
+                <i class="fas fa-info-circle"></i>&nbsp; Knowledge Base
+              </a>
+            </li>
+            <li menuItemName="Network Status" class="d-block no-collapse" id="Primary_Navbar-Network_Status">
+              <a class="pr-4" href="/whmcs/serverstatus.php">
+                <i class="fab fa-sellsy"></i>&nbsp; System Status
+              </a>
+            </li>
+            <li class="d-none dropdown collapsable-dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenu"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <ul class="collapsable-dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenu"></ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li
+              menuItemName="Account"
+              class="d-block no-collapse dropdown no-collapse"
+              id="Secondary_Navbar-Account"
+            >
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                <i class="fas fa-bars"></i>&nbsp; More
+              </a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li menuItemName="Login" class="dropdown-item" id="Secondary_Navbar-Account-Login">
+                  <a href="/whmcs/clientarea.php" class="dropdown-item px-2 py-0"> Login </a>
+                </li>
+                <li menuItemName="Register" class="dropdown-item" id="Secondary_Navbar-Account-Register">
+                  <a href="/whmcs/register.php" class="dropdown-item px-2 py-0"> Register </a>
+                </li>
+                <div class="dropdown-divider"></div>
+                <li
+                  menuItemName="Forgot Password?"
+                  class="dropdown-item"
+                  id="Secondary_Navbar-Account-Forgot_Password?"
+                >
+                  <a href="/whmcs/password/reset" class="dropdown-item px-2 py-0"> Forgot Password? </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="master-breadcrumb" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="https://clients.websavers.ca/whmcs"> Client Centre </a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/whmcs/knowledgebase"> Knowledge Base </a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Backup &amp; Restore</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section id="main-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-xl-3">
+          <div class="sidebar"></div>
+          <div class="d-none d-lg-block sidebar">
+            <div menuItemName="Support Knowledgebase Tag Cloud" class="mb-3 card card-sidebar">
+              <div class="card-header">
+                <h3 class="card-title m-0">
+                  <i class="fas fa-cloud"></i>&nbsp; Tag Cloud
+                  <i class="fas fa-chevron-up card-minimise float-right"></i>
+                </h3>
+              </div>
+              <div class="collapsable-card-body">
+                <div class="card-body">
+                  <a href="/whmcs/knowledgebase/tag/contact-form-7" style="font-size:12px;">contact form 7</a>
+                  <a href="/whmcs/knowledgebase/tag/Email" style="font-size:12px;">Email</a>
+                  <a href="/whmcs/knowledgebase/tag/imap" style="font-size:12px;">imap</a>
+                  <a href="/whmcs/knowledgebase/tag/letsencrypt" style="font-size:20px;">letsencrypt</a>
+                  <a href="/whmcs/knowledgebase/tag/nodejs" style="font-size:12px;">nodejs</a>
+                  <a href="/whmcs/knowledgebase/tag/outlook" style="font-size:12px;">outlook</a>
+                  <a href="/whmcs/knowledgebase/tag/prefix" style="font-size:12px;">prefix</a>
+                  <a href="/whmcs/knowledgebase/tag/REST-API" style="font-size:12px;">REST API</a>
+                  <a href="/whmcs/knowledgebase/tag/security" style="font-size:12px;">security</a>
+                  <a href="/whmcs/knowledgebase/tag/TLS" style="font-size:12px;">TLS</a>
+                  <a href="/whmcs/knowledgebase/tag/troubleshooting" style="font-size:12px;">troubleshooting</a>
+                  <a href="/whmcs/knowledgebase/tag/web-applications" style="font-size:20px;">web applications</a>
+                  <a href="/whmcs/knowledgebase/tag/web-server" style="font-size:12px;">web server</a>
+                  <a href="/whmcs/knowledgebase/tag/wordpress" style="font-size:20px;">wordpress</a>
+                  <a href="/whmcs/knowledgebase/tag/wp-json" style="font-size:12px;">wp-json</a>
+                </div>
+              </div>
+            </div>
+            <div menuItemName="Support" class="mb-3 card card-sidebar">
+              <div class="card-header">
+                <h3 class="card-title m-0">
+                  <i class="far fa-life-ring"></i>&nbsp; Support
+                  <i class="fas fa-chevron-up card-minimise float-right"></i>
+                </h3>
+              </div>
+              <div class="collapsable-card-body">
+                <div class="list-group list-group-flush d-md-flex" role="tablist">
+                  <a
+                    menuItemName="Support Tickets"
+                    href="/whmcs/supporttickets.php"
+                    class="list-group-item list-group-item-action"
+                    id="Secondary_Sidebar-Support-Support_Tickets"
+                  >
+                    <div class="sidebar-menu-item-wrapper">
+                      <div class="sidebar-menu-item-icon-wrapper">
+                        <i class="fas fa-ticket-alt fa-fw sidebar-menu-item-icon"></i>
+                      </div>
+                      <div class="sidebar-menu-item-label">Support Tickets</div>
+                    </div>
+                  </a>
+                  <a
+                    menuItemName="Announcements"
+                    href="/whmcs/announcements"
+                    class="list-group-item list-group-item-action"
+                    id="Secondary_Sidebar-Support-Announcements"
+                  >
+                    <div class="sidebar-menu-item-wrapper">
+                      <div class="sidebar-menu-item-icon-wrapper">
+                        <i class="fas fa-newspaper sidebar-menu-item-icon"></i>
+                      </div>
+                      <div class="sidebar-menu-item-label">Latest News</div>
+                    </div>
+                  </a>
+                  <a
+                    menuItemName="Knowledgebase"
+                    href="/whmcs/knowledgebase"
+                    class="list-group-item list-group-item-action active"
+                    id="Secondary_Sidebar-Support-Knowledgebase"
+                  >
+                    <div class="sidebar-menu-item-wrapper">
+                      <div class="sidebar-menu-item-icon-wrapper">
+                        <i class="fas fa-info-circle fa-fw sidebar-menu-item-icon"></i>
+                      </div>
+                      <div class="sidebar-menu-item-label">Knowledge Base</div>
+                    </div>
+                  </a>
+                  <a
+                    menuItemName="Network Status"
+                    href="/whmcs/serverstatus.php"
+                    class="list-group-item list-group-item-action"
+                    id="Secondary_Sidebar-Support-Network_Status"
+                  >
+                    <div class="sidebar-menu-item-wrapper">
+                      <div class="sidebar-menu-item-icon-wrapper">
+                        <i class="fab fa-sellsy sidebar-menu-item-icon"></i>
+                      </div>
+                      <div class="sidebar-menu-item-label">System Status</div>
+                    </div>
+                  </a>
+                  <a
+                    menuItemName="Open Ticket"
+                    href="/whmcs/submitticket.php"
+                    class="list-group-item list-group-item-action"
+                    id="Secondary_Sidebar-Support-Open_Ticket"
+                  >
+                    <div class="sidebar-menu-item-wrapper">
+                      <div class="sidebar-menu-item-icon-wrapper">
+                        <i class="fas fa-comments fa-fw sidebar-menu-item-icon"></i>
+                      </div>
+                      <div class="sidebar-menu-item-label">Create Support Ticket</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-xl-9 primary-content">
+          <form role="form" method="post" action="/whmcs/knowledgebase/search" class="mb-4">
+            <input type="hidden" name="token" value="d2a3e234184733503e2bf5fb0d65510ee08ef6af" />
+            <div class="input-group input-group-lg kb-search">
+              <input
+                type="text"
+                id="inputKnowledgebaseSearch"
+                name="search"
+                class="form-control font-weight-light"
+                placeholder="Enter a question here to search our knowledgebase for answers..."
+                value=""
+              />
+              <div class="input-group-append">
+                <button type="submit" id="btnKnowledgebaseSearch" class="btn btn-primary btn-input-padded-responsive">
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title m-0">
+                <i class="fal fa-folder-open fa-fw"></i>
+                Articles
+              </h3>
+            </div>
+            <div class="list-group list-group-flush" id="kb-results-list">
+              <a
+                href="/whmcs/knowledgebase/393/How-do-I-connect-a-cloud-backup-provider-like-Dropbox-or-Google-Drive.html"
+                class="list-group-item kb-article-item"
+                data-id="393"
+              >
+                <i class="fal fa-file-alt fa-fw text-black-50"></i>
+                How do I connect a cloud backup provider like Dropbox or Google Drive
+                <small>
+                  Problem Description
+                  You would like to connect 1-click web apps backups or Plesk Backup to a...
+                </small>
+              </a>
+              <a
+                href="/whmcs/knowledgebase/18/How-do-I-import-or-restore-a-Database-backup-with-Plesk.html"
+                class="list-group-item kb-article-item"
+                data-id="18"
+              >
+                <i class="fal fa-file-alt fa-fw text-black-50"></i>
+                How do I import or restore a Database backup with Plesk?
+                <small>
+                  Database backups are often referred to as any of the following three names. They are...
+                </small>
+              </a>
+              <a
+                href="/whmcs/knowledgebase/12/How-do-I-restore-files-from-backup.html"
+                class="list-group-item kb-article-item"
+                data-id="12"
+              >
+                <i class="fal fa-file-alt fa-fw text-black-50"></i>
+                How do I restore files from backup?
+                <small>
+                  What backup solutions can I restore from?
+                  Click here to learn about the two user-level backup...
+                </small>
+              </a>
+              <a
+                href="/whmcs/knowledgebase/360/How-to-handle-backup-failure-notices-from-1-click-web-apps-or-Plesk-Backup.html"
+                class="list-group-item kb-article-item"
+                data-id="360"
+              >
+                <i class="fal fa-file-alt fa-fw text-black-50"></i>
+                How to handle backup failure notices from 1-click web apps or Plesk Backup
+                <small>
+                  Problem Description
+
+                  You receive a notification from 1-click web apps (Installatron) indicating...
+                </small>
+              </a>
+              <a
+                href="/whmcs/knowledgebase/382/What-sort-of-Disaster-Recovery-options-are-available.html"
+                class="list-group-item kb-article-item"
+                data-id="382"
+              >
+                <i class="fal fa-file-alt fa-fw text-black-50"></i>
+                What sort of Disaster Recovery options are available?
+                <small>
+                  There's several layers of available protection. If you're using Shared Hosting, like our...
+                </small>
+              </a>
+            </div>
+          </div>
+
+          <a href="javascript:history.go(-1)" class="btn btn-default px-4"> &larr; Back </a>
+        </div>
+      </div>
+      <div class="d-lg-none sidebar sidebar-secondary">
+        <div menuItemName="Support Knowledgebase Tag Cloud" class="mb-3 card card-sidebar">
+          <div class="card-header">
+            <h3 class="card-title m-0">
+              <i class="fas fa-cloud"></i>&nbsp; Tag Cloud
+              <i class="fas fa-chevron-up card-minimise float-right"></i>
+            </h3>
+          </div>
+          <div class="collapsable-card-body">
+            <div class="card-body">
+              <a href="/whmcs/knowledgebase/tag/contact-form-7" style="font-size:12px;">contact form 7</a>
+              <a href="/whmcs/knowledgebase/tag/Email" style="font-size:12px;">Email</a>
+              <a href="/whmcs/knowledgebase/tag/imap" style="font-size:12px;">imap</a>
+              <a href="/whmcs/knowledgebase/tag/letsencrypt" style="font-size:20px;">letsencrypt</a>
+              <a href="/whmcs/knowledgebase/tag/nodejs" style="font-size:12px;">nodejs</a>
+              <a href="/whmcs/knowledgebase/tag/outlook" style="font-size:12px;">outlook</a>
+              <a href="/whmcs/knowledgebase/tag/prefix" style="font-size:12px;">prefix</a>
+              <a href="/whmcs/knowledgebase/tag/REST-API" style="font-size:12px;">REST API</a>
+              <a href="/whmcs/knowledgebase/tag/security" style="font-size:12px;">security</a>
+              <a href="/whmcs/knowledgebase/tag/TLS" style="font-size:12px;">TLS</a>
+              <a href="/whmcs/knowledgebase/tag/troubleshooting" style="font-size:12px;">troubleshooting</a>
+              <a href="/whmcs/knowledgebase/tag/web-applications" style="font-size:20px;">web applications</a>
+              <a href="/whmcs/knowledgebase/tag/web-server" style="font-size:12px;">web server</a>
+              <a href="/whmcs/knowledgebase/tag/wordpress" style="font-size:20px;">wordpress</a>
+              <a href="/whmcs/knowledgebase/tag/wp-json" style="font-size:12px;">wp-json</a>
+            </div>
+          </div>
+        </div>
+        <div menuItemName="Support" class="mb-3 card card-sidebar">
+          <div class="card-header">
+            <h3 class="card-title m-0">
+              <i class="far fa-life-ring"></i>&nbsp; Support
+              <i class="fas fa-chevron-up card-minimise float-right"></i>
+            </h3>
+          </div>
+          <div class="collapsable-card-body">
+            <div class="list-group list-group-flush d-md-flex" role="tablist">
+              <a
+                menuItemName="Support Tickets"
+                href="/whmcs/supporttickets.php"
+                class="list-group-item list-group-item-action"
+                id="Secondary_Sidebar-Support-Support_Tickets"
+              >
+                <div class="sidebar-menu-item-wrapper">
+                  <div class="sidebar-menu-item-icon-wrapper">
+                    <i class="fas fa-ticket-alt fa-fw sidebar-menu-item-icon"></i>
+                  </div>
+                  <div class="sidebar-menu-item-label">Support Tickets</div>
+                </div>
+              </a>
+              <a
+                menuItemName="Announcements"
+                href="/whmcs/announcements"
+                class="list-group-item list-group-item-action"
+                id="Secondary_Sidebar-Support-Announcements"
+              >
+                <div class="sidebar-menu-item-wrapper">
+                  <div class="sidebar-menu-item-icon-wrapper">
+                    <i class="fas fa-newspaper sidebar-menu-item-icon"></i>
+                  </div>
+                  <div class="sidebar-menu-item-label">Latest News</div>
+                </div>
+              </a>
+              <a
+                menuItemName="Knowledgebase"
+                href="/whmcs/knowledgebase"
+                class="list-group-item list-group-item-action active"
+                id="Secondary_Sidebar-Support-Knowledgebase"
+              >
+                <div class="sidebar-menu-item-wrapper">
+                  <div class="sidebar-menu-item-icon-wrapper">
+                    <i class="fas fa-info-circle fa-fw sidebar-menu-item-icon"></i>
+                  </div>
+                  <div class="sidebar-menu-item-label">Knowledge Base</div>
+                </div>
+              </a>
+              <a
+                menuItemName="Network Status"
+                href="/whmcs/serverstatus.php"
+                class="list-group-item list-group-item-action"
+                id="Secondary_Sidebar-Support-Network_Status"
+              >
+                <div class="sidebar-menu-item-wrapper">
+                  <div class="sidebar-menu-item-icon-wrapper">
+                    <i class="fab fa-sellsy sidebar-menu-item-icon"></i>
+                  </div>
+                  <div class="sidebar-menu-item-label">System Status</div>
+                </div>
+              </a>
+              <a
+                menuItemName="Open Ticket"
+                href="/whmcs/submitticket.php"
+                class="list-group-item list-group-item-action"
+                id="Secondary_Sidebar-Support-Open_Ticket"
+              >
+                <div class="sidebar-menu-item-wrapper">
+                  <div class="sidebar-menu-item-icon-wrapper">
+                    <i class="fas fa-comments fa-fw sidebar-menu-item-icon"></i>
+                  </div>
+                  <div class="sidebar-menu-item-label">Create Support Ticket</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </section>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <ul class="list-inline mb-7 text-center float-lg-right">
+        <li class="list-inline-item">
+          <a class="btn btn-icon mb-1" href="https://github.com/websavers" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon mb-1" href="https://www.instagram.com/websavers" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon mb-1" href="https://www.linkedin.com/company/websavers-inc" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon mb-1" href="https://www.youtube.com/websavers" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <button type="button" class="btn" data-toggle="modal" data-target="#modalChooseLanguage">
+            <div class="d-inline-block align-middle">
+              <div class="iti-flag us"></div>
+            </div>
+            English
+            /
+            $
+            CAD
+          </button>
+        </li>
+      </ul>
+
+      <ul class="nav justify-content-center justify-content-lg-start mb-7">
+        <li class="nav-item">
+          <a class="nav-link" href="/whmcs/contact.php"> Contact Us </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://websavers.ca/terms/" target="_blank">Terms of Service</a>
+        </li>
+      </ul>
+
+      <p class="copyright mb-0">Copyright &copy; 2025 Websavers Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div id="fullpage-overlay" class="w-hidden">
+    <div class="outer-wrapper">
+      <div class="inner-wrapper">
+        <img src="/whmcs/assets/img/overlay-spinner.svg" alt="" />
+        <br />
+        <span class="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal system-modal fade" id="modalAjax" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">Loading...</div>
+        <div class="modal-footer">
+          <div class="float-left loader">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            Loading...
+          </div>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary modal-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form method="get" action="/whmcs/knowledgebase/12/Backup-and-Restore?">
+    <div class="modal modal-localisation" id="modalChooseLanguage" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <p class="h5 pt-5 pb-3">Choose Currency</p>
+            <div class="row item-selector">
+              <input type="hidden" name="currency" data-current="1" value="" />
+              <div class="col-4">
+                <a href="#" class="item active" data-value="1"> $ CAD </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="item" data-value="3"> $ USD </a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-default">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <form action="#" id="frmGeneratePassword">
+    <div class="modal fade" id="modalGeneratePassword">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h4 class="modal-title">Generate Password</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger w-hidden" id="generatePwLengthError">
+              Please enter a number between 8 and 64 for the password length
+            </div>
+            <div class="form-group row">
+              <label for="generatePwLength" class="col-sm-4 col-form-label">Password Length</label>
+              <div class="col-sm-8">
+                <input
+                  type="number"
+                  min="8"
+                  max="64"
+                  value="12"
+                  step="1"
+                  class="form-control input-inline input-inline-100"
+                  id="inputGeneratePasswordLength"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="generatePwOutput" class="col-sm-4 col-form-label">Generated Password</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputGeneratePasswordOutput" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8 offset-sm-4">
+                <button type="submit" class="btn btn-default btn-sm">
+                  <i class="fas fa-plus fa-fw"></i>
+                  Generate new password
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-default btn-sm copy-to-clipboard"
+                  data-clipboard-target="#inputGeneratePasswordOutput"
+                >
+                  <img src="/whmcs/assets/img/clippy.svg" alt="Copy to clipboard" width="15" />
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnGeneratePasswordInsert"
+              data-clipboard-target="#inputGeneratePasswordOutput"
+            >
+              Copy to clipboard and Insert
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</body>
+</html>
