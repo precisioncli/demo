@@ -1,0 +1,22 @@
+:root {
+  color-scheme: light;
+}
+
+#sitejetPromoPanel {
+  display: none !important;
+}
+
+button[data-identifier="sitejet"],
+li[data-identifier="sitejet"] {
+  display: none !important;
+}
+
+button[data-identifier="sitejet"] + .btn-group > .btn[data-toggle="dropdown"] {
+  border-top-left-radius: 3.2px;
+  border-bottom-left-radius: 3.2px;
+}
+
+button[data-identifier="sitejet"] + .btn-group > .btn[data-toggle="dropdown"],
+.btn-group:has(> button[data-identifier="sitejet"]) > .btn[data-toggle="dropdown"] {
+  display: none !important;
+}
